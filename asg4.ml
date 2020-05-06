@@ -47,7 +47,7 @@ check_straight([(_,13),(_,12),(_,11),(_,10),(_,1)]) : bool = true |
 check_straight([(_,_),(_,_),(_,_),(_,_),(_,_)]) : bool = false;
 
 
-fun compare_straight([(_,13),(_,12),(_,11),(_,10),(_,1)],[(_,13),(_,12),(_,11),(_,10),(_,1)] : (suit * int) list) = "This is a tie" |
+fun compare_straight([(_,13),(_,12),(_,11),(_,10),(_,1)] : (suit * int) list,[(_,13),(_,12),(_,11),(_,10),(_,1)] : (suit * int) list) : string = "This is a tie" |
 	compare_straight([(_,13),(_,12),(_,11),(_,10),(_,1)],[(_,_),(_,_),(_,_),(_,_),(_,_)]) = "Hand 1 wins" |
 	compare_straight([(_,_),(_,_),(_,_),(_,_),(_,_)],[(_,13),(_,12),(_,11),(_,10),(_,1)]) = "Hand 2 wins" |
 	compare_straight((hs1,hn1)::t1,(hs2,hn2)::t2) = if hn1 = hn2 then "This is a tie" 
